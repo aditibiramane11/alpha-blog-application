@@ -1,26 +1,30 @@
-<% if @article.errors.any? %>
-  <h2>The following errors prevented the article from being saved</h2>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
+<div class="container-fluid">
+    <%= render '/shared/errors' %>
+  <div class="row">
+    <div class="col-md-3"></div>
+      <div class="col-md-6"><br>
+        <div class="card">
+            <div class="card-body">
+                  <%= form_with model: @article do |f| %>
+<p>
+  <%= f.label :Title %><br>
+  <%= f.text_field :Title, class: "form-control"  %>
+</p>
+<p>
+  <%= f.label :Description%><br>
+  <%= f.text_area :Description, class: "form-control"  %>
+</p>
+
+<div>
+  <%= f.submit 'Add Article', class: "btn btn-outline-success" %>
+  <%= link_to 'Return To Articles list', articles_path, class: "btn btn-outline-info" %>
+</div>
+
 <% end %>
-<%= form_with(model: @article, local: true) do |f| %>
+          </div>
+        </div> 
 
-  <p>
-    <%= f.label :Title %><br/>
-    <%= f.text_field :Title %>
-  </p>
-
-  <p>
-    <%= f.label :Description %><br/>
-    <%= f.text_area :Description %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
-
-<% end %> 
-
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
