@@ -1,4 +1,4 @@
-#jumbotron1{
+ #jumbotron1{
 
 	background-image:url("bgj.jpg");
 	padding: 50px;
@@ -19,6 +19,8 @@ h1{
 
 html,
 body {
+	
+
   height: 100%;
 }
 
