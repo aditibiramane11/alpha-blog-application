@@ -21,7 +21,7 @@
 </p>
 
 <div>
-  <%= f.submit "Sign Up", class: "btn btn-outline-success" %>
+  <%= f.submit(@user.new_record? ? "Sign Up" : "Update Account", class: "btn btn-outline-success") %>
   <%= link_to ' Cancel & Return to Articles list', articles_path, class: "btn btn-outline-info" %>
 </div>
 
