@@ -26,6 +26,12 @@ gem 'sassc'
 gem 'sassc-rails', '~> 2.1'
 
 
+gem 'will_paginate-bootstrap4'
+gem 'will_paginate', '~> 3.1', '>= 3.1.7'
+
+
+
+
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"

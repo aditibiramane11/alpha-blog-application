@@ -1,5 +1,6 @@
 <div id="page-content">
-  <h1 class="text-center mt-4">Listing All Articles</h1>
+  <h1 class="text-center mt-4"><u>Listing All Articles</u></h1>
+  <%= will_paginate @articles %>
   <%= render 'articles/article' %>
 </div>
 

@@ -1,11 +1,12 @@
 <div class="container-fluid">
-<h2><center>Showing article details</center></h2>
+<h2><center><u>Showing Article Details</u>.</center></h2>
 	<div class="row">
     <div class="col-md-3"></div>
       <div class="col-md-6"><br>
         <div class="card">
             <div class="card-header font-italic">
                 by <%= @article.user.username %>
+                  <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
             </div>
             <div class="card-body">
   <p><strong>Title: </strong><br> <%= @article.Title %></p>
@@ -13,6 +14,7 @@
   <%= link_to 'Edit',edit_article_path(@article), class: "btn btn-outline-success"%> 
   <%= link_to 'Delete',article_path(@article), data: { turbo_method: :delete }, class: "btn btn-outline-danger"%> 
   <%= link_to 'Return to Articles Listing', articles_path, class: "btn btn-outline-info" %>
+</div>  
 </div>
 </div>
 </div>

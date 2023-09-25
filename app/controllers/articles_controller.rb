@@ -7,8 +7,9 @@ class ArticlesController < ApplicationController
 		#@article = Article.find(params[:id])
 	end
 	def index
-		@articles = Article.all
-	end
+        # @articles = Article.all.paginate(page: params[:page],per_page:5)
+        @articles = Article.paginate(:page => params[:page], :per_page => 5)
+    end
 
 	def new
 		@article = Article.new
@@ -45,7 +46,7 @@ class ArticlesController < ApplicationController
 		#@article = Article.find(params[:id])
 		@article.destroy
 		redirect_to articles_path
-
+ 
 	end
 
     private
