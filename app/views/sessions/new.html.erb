@@ -1,0 +1,40 @@
+<div id="page-content">
+  <h2 class="text-center mt-4"><u>Log In</u></h2>
+   <div class="container-fluid">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-12">  
+  <div class="row">
+    <div class="col-md-3"></div>
+      <div class="col-md-6"><br>
+        <div class="card">
+            <div class="card-body">
+                  <%= form_with scope: :session, url: login_path do |f| %>
+  <%= f.label :email %><br>
+  <%= f.email_field :email, class: "form-control", placeholder: "enter an email address" %>
+</p>
+
+<p>
+  <%= f.label :password%><br>
+  <%= f. password_field :password, class: "form-control", placeholder: "enter a password" %>
+</p>
+
+<div>
+  <%= f.submit"Log in" , class: "btn btn-outline-success" %>
+  <%= link_to ' Cancel & Return to Articles list', articles_path, class: "btn btn-outline-info" %>
+</div>
+
+<% end %>
+          </div>
+        </div> 
+
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div> 
