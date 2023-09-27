@@ -16,7 +16,7 @@
 </p>
 
 <div>
-  <%= f.submit 'Add Article', class: "btn btn-outline-success" %>
+   <%= f.submit(@article.new_record? ? "Add Article" : "Update Article", class: "btn btn-outline-success") %>
   <%= link_to 'Return To Articles list', articles_path, class: "btn btn-outline-info" %>
 </div>
 

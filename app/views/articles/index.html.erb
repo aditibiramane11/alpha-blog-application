@@ -1,6 +1,7 @@
 <div id="page-content">
   <h1 class="text-center mt-4"><u>Listing All Articles</u></h1>
-  <%= will_paginate @articles %>
   <%= render 'articles/article' %>
+  <div class="d-flex justify-content-center">
+    <%= will_paginate @articles %>
+  </div>
 </div>
-

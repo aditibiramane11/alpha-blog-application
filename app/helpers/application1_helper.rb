@@ -1,2 +1,0 @@
-module Application1Helper
-end
