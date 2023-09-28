@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AlphaBlogApplication</title>
+    <title>Alpha-Blog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -29,12 +29,20 @@
 
   </head>
   <body class="d-flex flex-column">
-      
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
       
        <%= render 'layouts/navigation' %>
-       <%= render 'layouts/messages' %>
+       <div class="container">
+       <% flash.each do |name, msg| %>
+       <div class="alert alert-<%= name == "notice" ? "success" : "danger" %> alert-dismissible fade show" role="alert">
+      <%= msg %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <% end %> 
+      </div>
        <%= yield %>
-       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   
  </body>
 </html>

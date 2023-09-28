@@ -7,7 +7,11 @@
             <div class="card-header font-italic">
                 by <%= @article.user.username %>
                   <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
-            </div>
+                  <div><% if @article.categories.any? %>
+                             <%= render @article.categories %>
+                       <% end %>
+                  </div>            
+              </div>
             <div class="card-body">
   <p><strong>Title: </strong><br> <%= @article.Title %></p>
   <p><strong>Description: </strong> <br> <%= @article.Description %></p>

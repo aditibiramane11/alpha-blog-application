@@ -1,0 +1,38 @@
+<div id="page-content">
+  <h2 class="text-center mt-4"><u>Create a new Category</u></h2>
+  <div class="container-fluid">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-12">  
+  <div class="row">
+    <div class="col-md-3"></div>
+      <div class="col-md-6"><br>
+        <div class="card">
+            <div class="card-body">
+                 <%= render '/shared/errors' , obj: @category %>
+                  <%= form_with model: @category do |f| %>
+<p>
+  <%= f.label :name ,"Category name" %><br>
+  <%= f.text_field :name , class: "form-control", placeholder: "enter a name" %>
+</p>
+
+
+<div>
+  <%= f.submit class: "btn btn-outline-success" %>
+  <%= link_to ' Cancel & Return to Articles list', articles_path, class: "btn btn-outline-info" %>
+</div>
+
+<% end %>
+          </div>
+        </div> 
+
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+</div> 
