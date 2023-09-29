@@ -24,13 +24,14 @@ class CategoriesController < ApplicationController
 	end
 
 	def show
-		@category=Category.find(params[:id])
-		@articles = @category.articles.paginate(:page => params[:page], :per_page => 5)
+		 @category = Category.find(params[:id])
+		 @articles = @category.articles.paginate(:page => params[:page], :per_page => 5)
 	end
 
 	def edit
         @category = Category.find(params[:id])
     end
+
 
   def update
       @category = Category.find(params[:id])

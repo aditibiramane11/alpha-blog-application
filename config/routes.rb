@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   get 'logout' => 'sessions#destroy'
   get 'delete' => 'articles#destroy'
-  resources :categories, except: [:destroy]
+  resources :categories
 end
   
